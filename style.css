@@ -39,9 +39,18 @@ body{
     
     background-image: url(./img/Black_brick_background.webp);
     margin: 0;
+    
 }
 
 
+
+header{
+
+    position: relative;
+    
+
+
+}
 
 #title_bar{
     background-color: rgba(217, 217, 217, 1);
@@ -59,22 +68,24 @@ body{
 
     height: 20px;
     width: 150px;
-    margin-left: 55%;
+    margin-left: 30vw;
       
 
 }
 
-/* #product_item_links{
-    overflow: visible;
-    background-color: rgba(173, 173, 173, 1);
-    width: 100vw;
-    max-width: inherit;
-    max-height: max-content;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    text-align: center;
 
-} */
+#product_item_links{
+
+    background-color: rgba(173, 173, 173, 1);
+    display: grid;
+    height: 300vw;
+    max-height: 300vw;
+    width: 50vw;
+    max-width: 50vw;
+    z-index: 10;
+    position: fixed;
+
+}
 
 
 
@@ -101,6 +112,7 @@ body{
     display: flex;
     flex-direction: row-reverse;
     gap: 60%;
+    z-index: 20;
     
 
 }
