@@ -101,12 +101,43 @@ header{
 }
 
 
+.best_sellers{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    position: absolute;
+    left: 28%;
+    gap: 15%;
+}
+
+.best_sellers > article {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.best_sellers > h2{
+
+    
+
+}
+
+.best_sellers > button{
+ 
+
+}
+
+
 
 #bottom_bar{
     background-color: rgba(173, 173, 173, 1);
     position: fixed;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
+    max-width: 100vw;
     max-height: fit-content;
     padding-top: 10px;
     display: flex;
