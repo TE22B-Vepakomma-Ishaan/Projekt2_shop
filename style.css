@@ -8,11 +8,15 @@
     font-family: 'Suburbia';
     src: url(Fonts/SuburbiaPersonalUse-vmEaA.ttf) format('truetype');
 }
+@font-face {
+    font-family: 'Rocklife-Grunge';
+    src: url(Fonts/RocklifeGrunge-MVeMv.ttf) format('truetype');
+}
 
 
 h1{
     color: rgba(217, 217, 217, 1);
-    font-family: 'Suburbia';
+    font-family: 'Granite';
     font-size: calc(2rem + 2vw);
 }
 
@@ -20,11 +24,12 @@ h1{
 h2 {
     color: rgba(217, 217, 217, 1);
     font-size: calc(1.2rem + 2vw);
-    font-family: 'Suburbia';}
+        
+}
 
 p{
     color: rgba(217, 217, 217, 1);
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1.5rem + 1.5vw);
     font-family: 'Suburbia';
 }
 
@@ -106,7 +111,7 @@ header{
     display: grid;
     grid-template-columns: 1fr;
     position: absolute;
-    left: 28%;
+    left: 18%;
     gap: 15%;
 }
 
@@ -119,15 +124,23 @@ header{
     
 }
 
-.best_sellers > h2{
+.BestS-Product_list > h2{
 
     
 
 }
 
-.best_sellers > button{
+.BestS-Product_list > button{
  
+    background-color:#c90606;
+    max-width: fit-content;
 
+}
+
+.BestS-Product_list > p{
+    
+    font-family: 'Rocklife-Grunge';
+    
 }
 
 
@@ -154,7 +167,7 @@ header{
 
 
 
-.topnav{
+.mobile_nav{
     overflow: hidden;
     background-color: rgba(173, 173, 173, 1);
     position: relative;
@@ -165,7 +178,7 @@ header{
     display: none;
 }
 
-.topnav a{
+.mobile_nav a{
 color: black;
 display: block;
 
@@ -192,7 +205,7 @@ display: block;
     display: flex;
 }
 
-#meny{
+#menu{
     display: none;
 }
 
