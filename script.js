@@ -7,14 +7,19 @@ function openMenu() {
       x.style.display = "none";
     } else {
       x.style.display = "block";
-      // x.style.filter = "greyscale(60%)";
     }
-
-    // let prom =document.querySelector("#promoted_page");
-    // prom.style.backgroundColor="grey";
-    // // document.body.style.filter="grayscale(100%)";
 
   } 
 
+
+
+  var $slider = document.getElementById('product-item-links');
+  var $toggle = document.getElementById('toggle');
+  
+  $toggle.addEventListener('click', function() {
+      var isOpen = $slider.classList.contains('slide-in');
+  
+      $slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-in');
+  });
 
   

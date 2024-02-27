@@ -12,6 +12,14 @@
     font-family: 'Rocklife-Grunge';
     src: url(Fonts/RocklifeGrunge-MVeMv.ttf) format('truetype');
 }
+@font-face {
+    font-family: 'Impact-label';
+    src: url(Fonts/ImpactLabel-lVYZ.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Impact-label-rev';
+    src: url(Fonts/ImpactLabelReversed-nDMR.ttf) format('truetype');
+}
 
 
 h1{
@@ -24,7 +32,7 @@ h1{
 h2 {
     color: rgba(217, 217, 217, 1);
     font-size: calc(1.2rem + 2vw);
-        
+    
 }
 
 p{
@@ -84,13 +92,61 @@ header{
     background-color: rgba(173, 173, 173, 1);
     display: grid;
     height: 300vw;
-    max-height: 300vw;
+    max-height: 500vw;
     width: 50vw;
     max-width: 50vw;
     z-index: 10;
-    position: fixed;
+    position: absolute;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
 
 }
+#product_item_links > a{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:   5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+
+}
+
+
+
+
+.slide-in {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+}
+    
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+    
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -111,8 +167,7 @@ header{
     display: grid;
     grid-template-columns: 1fr;
     position: absolute;
-    left: 18%;
-    gap: 15%;
+    gap: 5%;
 }
 
 .best_sellers > article {
@@ -124,8 +179,13 @@ header{
     
 }
 
+
+
 .BestS-Product_list > h2{
 
+    font-family: 'Impact-label-rev';
+    font-size: calc(1.5rem + 1.2vw);
+    text-align: center;
     
 
 }
@@ -134,13 +194,12 @@ header{
  
     background-color:#c90606;
     max-width: fit-content;
+    height: 15vw;
 
 }
-
-.BestS-Product_list > p{
-    
-    font-family: 'Rocklife-Grunge';
-    
+.BestS-Product_list > button >p{
+ 
+   margin: 0;
 }
 
 
@@ -202,7 +261,7 @@ display: block;
 @media  screen and (min-width:1008px) {
 
 #product_item_links{
-    display: flex;
+    display: none;
 }
 
 #menu{
