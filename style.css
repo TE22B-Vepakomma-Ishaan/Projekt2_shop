@@ -90,24 +90,31 @@ header{
 #product_item_links{
 
     background-color: rgba(173, 173, 173, 1);
-    display: grid;
-    height: 300vw;
-    max-height: 500vw;
+
+    height: 100vh;
+    max-height: 100vh;
     width: 50vw;
     max-width: 50vw;
+    left: 0;
     z-index: 10;
-    position: absolute;
+    position: fixed;
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
 
 }
-#product_item_links > a{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:   5fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
-
+#product_item_links > ul{
+    display: flex;
+    flex-direction: column-reverse;
+    list-style: none;
+    gap: 5vh;
+    font-family: 'Suburbia';
+    font-size: calc(3vw + 2rem);
 }
+#product_item_links > li{
+    border: 5px;
+    border-color: black;
+}
+
 
 
 
@@ -150,9 +157,9 @@ header{
 
 
 
-#promoted_page{
+.promoted_page{
     background-color: rgba(41,41,41, 1);
-
+    margin-top: 10vh;
 }
 
 
@@ -162,12 +169,71 @@ header{
 }
 
 
+
+.promoted-images-slider {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    transform: translateY(50%);
+    position: relative;
+    bottom: 20vh;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+
+}  
+
+
+
+.slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 1s ease;
+
+  }
+  
+.promoted-images-slider > img {
+    width: 100%;
+    height: auto;
+    
+  }
+
+  
+
+.prev, .next {
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+  
+
+/*shop page--------------------------------------*/
+
 .best_sellers{
 
     display: grid;
     grid-template-columns: 1fr;
     position: absolute;
     gap: 5%;
+    margin-top: 20vh;
 }
 
 .best_sellers > article {
@@ -194,7 +260,7 @@ header{
  
     background-color:#c90606;
     max-width: fit-content;
-    height: 15vw;
+    height: 8vh;
 
 }
 .BestS-Product_list > button >p{
