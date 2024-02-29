@@ -44,9 +44,20 @@ p{
 
 
 
+*, *::before, *::after{
 
+    box-sizing: border-box;
+}
 
+ul{
+    margin: 0;
+    padding: 0;
+}
 
+nav{
+    margin: 0;
+    padding: 0;
+}
 
 body{
     
@@ -163,72 +174,101 @@ header{
 
 
 .promoted_page{
+    display: grid;
     background-color: rgba(41,41,41, 1);
     margin-top: 10vh;
+    padding: 20px;
+    grid-template-columns: 1fr;
+    padding-bottom: 5vh;
+    text-align: center;
+    
 }
 
 
 #promoted_page-text{
     
-
+margin: bottom;
 }
 
 
 
-.promoted-images-slider {
+.promoted-images-slider{
+
+    display: flex;
     width: 250px;
     height: 250px;
-    margin: auto;
-    overflow: hidden;
-    transform: translateY(50%);
     position: relative;
-    bottom: 20vh;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    align-items: center;
+    margin: auto;
     
+}
+.promoted-images-slider > ul{
 
-}  
+list-style-type: none;
 
+    
+}
 
-
-.slide {
+  
+.slide{
     position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.slide[data-active]{
+
+    opacity: 1;
+}
+
+.slide > img{
+
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit:contain;
+    object-position: center;
+}
+
+.slide > p{
+
+    position: relative;
+    margin: 0;
+    padding: 0; 
+    border-radius: 5px;
+
+}
+
+.slider-button{
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    color: rgba(173, 173, 173, 1);
     top: 50%;
     transform: translateY(-50%);
-    opacity: 0;
-    transition: opacity 1s ease;
-
-  }
-  
-.promoted-images-slider > img {
-    width: 100%;
-    height: auto;
-    
-  }
-
-  
-
-.prev, .next {
-  cursor: pointer;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-decoration: none;
+    cursor: pointer;
+    border-radius: .25rem;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.prev {
-  left: 0;
+.slider-button:hover, 
+.slider-button:focus{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-.next {
-  right: 0;
+.slider-button.prev{
+
+    right: 55vw;
 }
 
-  
+.slider-button.next{
+    left: 55vw;
+}
+
+
+
 
 /*shop page--------------------------------------*/
 
@@ -292,20 +332,25 @@ header{
 }
 
 #shopping-cart{
-    
+    cursor: pointer;
 }
 
+#menu{
+    cursor: pointer;
+}
 
 
 .mobile_nav{
     overflow: hidden;
     background-color: rgba(173, 173, 173, 1);
     position: relative;
+    
 }
 
 
 #product_item_links{
     display: none;
+    
 }
 
 .mobile_nav a{

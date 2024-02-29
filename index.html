@@ -51,26 +51,31 @@
 
     <div class="promoted_page">
         <div id="promoted_page-text">
-            <h1>YAY new product</h1>
-            <h2>new shit limited offer</h2>
-            <p>offer ends at date</p>
+            <h1>LIMITED TIME OFFER!</h1>
+            <h2>OFFICAL PIERCE THE VEIL MERCH!</h2>
+            <p>Offer ends in: 52h 29min </p>
         </div>
 
-        <div class="promoted-images-slider">
-            <div class="slide">
-              <img src="./img/PTV_Skeletons_LS_NEW_1200x.webp" alt="shirt-skeletons" width="250px" height="250px"/>
-            </div>
-            <div class="slide">
-              <img src="./img/PTV_MachineBlock_Tee_NEW_1200x.webp" alt="tee-machine-block" width="250px" height="250px"/>
-            </div>
-            <div class="slide">
-              <img src="./img/PTV_BlackStars_Beanie_NEW_1200x.webp" alt="cap-blackstars" width="250px" height="250px" />
-            </div>
-
-            <a class="prev" onclick="prevSlide()">&lt;</a>
-            <a class="next" onclick="nextSlide()">&gt;</a>
-          </div>
-
+        <div class="promoted-images-slider" data-slider>
+            <ul data-slides>
+                <li class="slide" data-active="first image">
+                    <img src="./img/PTV_Skeletons_LS_NEW_1200x.webp" alt="shirt-skeletons" width="250px" height="250px"/>
+                    <p>top</p>
+                </li>
+                <li class="slide">
+                    <img src="./img/PTV_MachineBlock_Tee_NEW_1200x.webp" alt="tee-machine-block" width="250px" height="250px"/>
+                    <p>tee</p>
+               </li>
+               <li class="slide">
+                   <img src="./img/PTV_BlackStars_Beanie_NEW_1200x.webp" alt="cap-blackstars" width="250px" height="250px" />
+                   <p>Hats</p>
+                </li>
+                
+            </ul>
+            
+            <button class="slider-button prev" data-slider-button="prev">&#8701;</button>
+            <button class="slider-button next" data-slider-button="next">&#8702;</button>
+        </div>
     </div>
 
 
