@@ -10,6 +10,20 @@ function openMenu() {
     }
 
   } 
+  
+function openCart() {
+    var x = document.getElementById("cart");
+    
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+
+  } 
+
+
+
 
 
 
@@ -25,7 +39,10 @@ function openMenu() {
   
 
   
-  
+
+
+
+
 
 const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
@@ -33,7 +50,7 @@ let currentSlide = 0;
 function showSlide(index) {
   slides.forEach((slide, i) => {
     if (i === index) {
-      slide.style.opacity = 100;
+      slide.style.opacity = 1;
     } else {
       slide.style.opacity = 0;
     }
@@ -55,27 +72,6 @@ showSlide(currentSlide);
 
 
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
 
 
 
-
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
-}
-
-
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    if (i === index) {
-      slide.style.opacity = 100;
-    } else {
-      slide.style.opacity = 0;
-    }
-  });
-}
