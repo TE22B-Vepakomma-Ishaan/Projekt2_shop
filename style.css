@@ -37,8 +37,8 @@ h2 {
 
 p{
     color: rgba(217, 217, 217, 1);
-    font-size: calc(1.5rem + 1.5vw);
-    font-family: 'Suburbia';
+    font-size: calc(1.5rem + 1vw);
+    font-family: 'Impact-label-rev';
 }
 
 
@@ -163,7 +163,37 @@ header{
 
 #cart{
 
+    display: block;
     background-color: rgba(173, 173, 173, 1);
+    width: 50vw;
+    max-width: 50vw;
+    max-height: 70vh;
+    height: 50vh;
+    z-index: 21;
+    position: fixed;
+    bottom: 80px;
+    right: 5vw;
+    
+}
+
+#cart > h3{
+    text-align: center;
+}
+
+#cart-list{
+
+    padding: 5vw;
+    font-size: larger;
+    font-family: 'impact-label-rev';
+    font-weight: 500;
+
+    
+}
+
+#cart-list > li{
+
+   margin-bottom: 2vh;
+
 }
 
 
@@ -179,7 +209,7 @@ header{
     margin-top: 10vh;
     padding: 20px;
     grid-template-columns: 1fr;
-    padding-bottom: 5vh;
+    padding-bottom: 10vh;
     text-align: center;
     
 }
@@ -236,6 +266,7 @@ list-style-type: none;
     margin: 0;
     padding: 0; 
     border-radius: 5px;
+    font-size: calc(1rem + 0.8vw);;
 
 }
 
@@ -260,11 +291,11 @@ list-style-type: none;
 
 .slider-button.prev{
 
-    right: 55vw;
+    right: 60vw;
 }
 
 .slider-button.next{
-    left: 55vw;
+    left: 60vw;
 }
 
 
@@ -281,7 +312,7 @@ list-style-type: none;
     margin-top: 20vh;
 }
 
-.best_sellers > article {
+.item{
 
     display: flex;
     flex-direction: column;
@@ -292,7 +323,7 @@ list-style-type: none;
 
 
 
-.BestS-Product_list > h2{
+.item-name{
 
     font-family: 'Impact-label-rev';
     font-size: calc(1.5rem + 1.2vw);
@@ -301,14 +332,15 @@ list-style-type: none;
 
 }
 
-.BestS-Product_list > button{
- 
+.item > button{
+    
+    cursor: pointer;
     background-color:#c90606;
     max-width: fit-content;
     height: 8vh;
 
 }
-.BestS-Product_list > button >p{
+.item > button >p{
  
    margin: 0;
 }
@@ -325,7 +357,7 @@ list-style-type: none;
     padding-top: 10px;
     display: flex;
     flex-direction: row-reverse;
-    gap: 60%;
+    justify-content: space-between;
     z-index: 20;
     
 
@@ -333,10 +365,24 @@ list-style-type: none;
 
 #shopping-cart{
     cursor: pointer;
+    height: 50px;
+    width: 50px;
 }
+
+.cart{
+    font-size: 3rem;
+    display: flex;
+    flex-direction: row;
+    padding-right: 10vw;
+    padding-bottom: 1vh;
+    gap: 2vw;
+}
+
+
 
 #menu{
     cursor: pointer;
+    
 }
 
 
