@@ -14,10 +14,10 @@ function openMenu() {
 function openCart() {
     var x = document.getElementById("cart");
     
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
+    if (x.style.display === "block") {
       x.style.display = "none";
+    } else {
+      x.style.display = "block";
     }
 
   } 
@@ -43,7 +43,51 @@ buttons.forEach(button => {
     
     
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
+    
+    function saveCartData() {
+      const cartItems = [];
+      cartList.querySelectorAll('li').forEach(item => {
+        const productName = item.dataset.product;
+        const quantity = parseInt(item.querySelector('.quantity').textContent);
+        const price = parseFloat(item.querySelector('.total-price').dataset.price);
+        cartItems.push({ productName, quantity, price });
+      });
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }
+    
+    function loadCartData() {
+      const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+      cartItems.forEach(item => {
+        const newItem = document.createElement('li');
+        newItem.dataset.product = item.productName;
+        newItem.innerHTML = `
+          <span>${item.productName}</span>
+          x<span class="quantity">${item.quantity}</span>
+          -  <span class="total-price" data-price="${item.price.toFixed(2)}">£${(item.price * item.quantity).toFixed(2)}</span>
+        `;
+        cartList.appendChild(newItem);
+      });
+      updateCartSummary(); 
+    }
+    
+
+
+
     
     const addToCartButtons = document.querySelectorAll('.item button');
     
@@ -86,6 +130,22 @@ function addToCart(event) {
       -  <span class="total-price" data-price="${productPrice.toFixed(2)}">£${productPrice.toFixed(2)}</span>
     `;
     cartList.appendChild(newItem);
+
+
+    saveCartData();
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadCartData();
+});
+
+
+function clearCart(){
+  const cartList = document.getElementById('cart-list');
+
+  cartList.innerHTML = '';
+  updateTotalPrice();
+}
+
 
