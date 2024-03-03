@@ -24,7 +24,7 @@
         </nav>
     </div>
 
-    <div id="cart">
+    <div id="cart" class="slide-up">
 
         <h2>Cart Items</h2>
         <i class="bi bi-bag-x" id="clear-cart" onclick="clearCart()"></i>
@@ -44,14 +44,16 @@
             <img src="./img/pngimg.com - circle_PNG36.png" alt="logo placeholder" height="100px" width="100px">
             <input type="text" placeholder="Search" name="" id="search_bar">
         </div>
-    <!-- <nav class="desktop_exclusive"id="product_item_links">
-            <a href="link">T-Shirts</a>
-            <a href="link">Hoodies</a>
-            <a href="link">Hats</a>
-            <a href="link">Accessories</a>
-            <a href="link">Boots</a>
-            <a href="link">Vinyls</a>
-        </nav> -->
+    <nav class="desktop_exclusive">
+        <ul>
+            <li><a href="#">T-Shirts</a></li>
+            <li><a href="#">Hoodies</a></li>
+            <li><a href="#">Hats</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Boots</a></li>
+            <li><a href="#">Vinyls</a></li>
+        </ul>
+        </nav>
 
     </header>
 
@@ -169,12 +171,11 @@
     <div class="mobile_nav" id="bottom_bar">
         
         <div class="cart">
-         <i class="bi bi-bag" id="shopping-cart" onclick="openCart()"></i>
+         <i class="bi bi-bag" id="shopping-cart" onclick="toggleCart()"></i>
         <div class="cartAmount">0</div>
         </div>
 
-
-        <img id="menu" onclick="openMenu()" src="./img/61778-200.webp" alt="menu icon" height="50px"width="50px">
+        <i class="bi bi-list" id="menu" onclick="openMenu()"></i>
     </div> 
 </body>
 </html>

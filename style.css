@@ -210,6 +210,17 @@ header{
 
 }
 
+.slide-up {
+    transition: transform 0.2s ease;
+    transform: translateY(-5%);
+  }
+  
+
+  .slide-down {
+    transition: transform 0.5s ease;
+    transform: translateY(200%);
+  }
+    
 
 
 
@@ -280,7 +291,7 @@ list-style-type: none;
     margin: 0;
     padding: 0; 
     border-radius: 5px;
-    font-size: calc(1rem + 0.8vw);;
+    font-size: calc(1rem + 0.8vw);
 
 }
 
@@ -337,7 +348,11 @@ list-style-type: none;
     
 }
 
+.item > img{
 
+    max-width: 20vw;
+    max-height: 20vh;
+}
 
 .item-name{
 
@@ -383,6 +398,7 @@ list-style-type: none;
     cursor: pointer;
     height: 50px;
     width: 50px;
+    font-size: (4vw + 3rem);
 }
 
 .cart{
@@ -398,6 +414,7 @@ list-style-type: none;
 
 #menu{
     cursor: pointer;
+    font-size: calc(4vw + 3rem);
     
 }
 
@@ -447,12 +464,86 @@ display: block;
 
 @media  screen and (min-width:1008px) {
 
-#product_item_links{
+    #product_item_links{
     display: none;
+    }
+
+    #menu{
+    display: none;
+    }
+
+    .best_sellers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+    }
+
+    .item > img{
+
+    }
+
+
+    .desktop_exclusive{
+    
+
+        background-color: rgba(173, 173, 173, 1);
+    
+        height: 10vh;
+        max-height: 5vh;
+        width: 100vw;
+        max-width: 100vw;
+
+    
+    }
+    .desktop_exclusive > ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 5vh;
+        font-family: 'Suburbia';
+        font-size: calc(2vw + 1rem);
+        justify-content: space-between;
+        
+    }
+    .desktop_exclusive > li{
+        
+    }
+    
+    #search_bar{
+        width: 10vw;
+        max-width: 10vw;
+        height: 3vh;
+
+    }
+
+    .slide > p{
+
+        position: relative;
+        margin: 0;
+        padding: 0; 
+        border-radius: 5px;
+        font-size: calc(1rem + 0.8vw);
+        width: max-content;
+        text-align: center;
+        right: 50%;
+    
+    }
+
+    .slider-button.prev{
+        right: 20vw;
+        
+    }
+    
+    .slider-button.next{
+        
+        left: 20vw;
+    }
+
+
+
 }
 
-#menu{
-    display: none;
-}
 
-}
+
+
