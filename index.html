@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>¨
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <script src="script.js"defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
@@ -24,7 +24,7 @@
         </nav>
     </div>
 
-    <div id="cart" class="slide-up">
+    <div id="cart" class="slide-down">
 
         <h2>Cart Items</h2>
         <i class="bi bi-bag-x" id="clear-cart" onclick="clearCart()"></i>
@@ -38,21 +38,31 @@
 
     </div>
 
-    
-    <header>
+    <header class="mobile_header">
         <div id="title_bar">
             <img src="./img/pngimg.com - circle_PNG36.png" alt="logo placeholder" height="100px" width="100px">
             <input type="text" placeholder="Search" name="" id="search_bar">
+        </div>  
+        
+    </header>
+    <header class="desktop_header">
+        <div id="title_bar">
+            <img src="./img/pngimg.com - circle_PNG36.png" alt="logo placeholder" height="100px" width="100px">
+            <input type="text" placeholder="Search" name="" id="search_bar">
+            <div class="cart">
+                <i class="bi bi-bag" id="shopping-cart" onclick="toggleCart()"></i>
+               <div class="cartAmount">0</div>
+            </div>
         </div>
-    <nav class="desktop_exclusive">
-        <ul>
-            <li><a href="#">T-Shirts</a></li>
-            <li><a href="#">Hoodies</a></li>
-            <li><a href="#">Hats</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Boots</a></li>
-            <li><a href="#">Vinyls</a></li>
-        </ul>
+        <nav class="desktop_exclusive" >
+            <ul>
+                <li><a href="#">T-Shirts</a></li>
+                <li><a href="#">Hoodies</a></li>
+                <li><a href="#">Hats</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Boots</a></li>
+                <li><a href="#">Vinyls</a></li>
+            </ul>
         </nav>
 
     </header>
@@ -140,8 +150,8 @@
         <article class="item" id="cap-legs">
             <img src="./img/PTV_DADHAT_2022_1200x.webp" alt="LEGS CAP" width="200px" height="250px">
             <div class="item-name">
-
-                <h2>LEGS CAP</h2>
+                
+                <h2>LEGS CAP </h2>
             </div>
             <div class="item-price"><h2>£20</h2></div>
             <button onclick="addToCart()">

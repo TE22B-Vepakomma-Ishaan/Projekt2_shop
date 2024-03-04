@@ -13,28 +13,30 @@ function openMenu() {
 
   function openCart() {
     const cart = document.getElementById('cart');
-    cart.classList.remove('slide-up');
-    cart.classList.add('slide-down');
+    cart.classList.remove('slide-down');
+    cart.classList.add('slide-up');
   }
   
 
   function closeCart() {
     const cart = document.getElementById('cart');
-    cart.classList.remove('slide-down');
-    cart.classList.add('slide-up');
+    cart.classList.remove('slide-up');
+    cart.classList.add('slide-down');
   }
   
   function toggleCart() {
     const cart = document.getElementById('cart');
-    if (cart.classList.contains('slide-up')) {
+    if (cart.classList.contains('slide-down')) {
       openCart();
     } else {
       closeCart(); 
     }
   }
 
+const cart = document.getElementById('cart');
 
 
+// image slider----------------------------------------------------
 const buttons = document.querySelectorAll("[data-slider-button]");
 
 buttons.forEach(button => {
@@ -55,7 +57,7 @@ buttons.forEach(button => {
     
     
 
-    
+    // cart list functions------------------------------------------------
     function saveCartData() {
       const cartItems = [];
       cartList.querySelectorAll('li').forEach(item => {
@@ -145,7 +147,9 @@ function clearCart(){
   updateTotalPrice();
 }
 
-function totalQuantity() {
+
+
+function findTotalQuantity() {
   const cartItems = document.querySelectorAll('#cart-list li');
   let totalQuantity = 0;
 
@@ -156,9 +160,6 @@ function totalQuantity() {
   });
 
   return totalQuantity;
+  
 }
 
-const cartAmount = document.getElementsByClassName('.cartAmount');
-const totalQuantity = totalQuantity();
-
-cartAmount.innerHTML = `{totalQuantity}`
