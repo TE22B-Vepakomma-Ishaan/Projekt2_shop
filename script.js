@@ -144,7 +144,7 @@ function clearCart(){
   const cartList = document.getElementById('cart-list');
 
   cartList.innerHTML = '';
-  updateTotalPrice();
+  saveCartData();
 }
 
 
@@ -163,3 +163,37 @@ function findTotalQuantity() {
   
 }
 
+
+const mq = window.matchMedia( "(min-width: 1008px)" );
+window.m
+
+if (mq.matches) {
+  if ((cart.classList.contains('slide-down'))){
+    cart.classList.remove('slide-down');
+    cart.classList.add('slide-out-desk');
+  }
+  if ((cart.classList.contains('slide-up'))){
+    cart.classList.remove('slide-up');
+    cart.classList.add('slide-out-desk');
+  }
+  
+  }
+
+
+  function openCartDesk(){
+    cart.classList.remove('slide-out-desk');
+    cart.classList.add('slide-in-desk');
+  }
+  function closeCartDesk(){
+    cart.classList.remove('slide-in-desk');
+    cart.classList.add('slide-out-desk');
+  }
+  
+function toggleCartDesk(){
+  if (cart.classList.contains('slide-out-desk')) {
+    openCartDesk();
+  } else {
+    closeCartDesk(); 
+  }
+
+}

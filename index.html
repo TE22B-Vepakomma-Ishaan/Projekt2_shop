@@ -25,11 +25,13 @@
     </div>
 
     <div id="cart" class="slide-down">
+        <div class="cart-header">
 
-        <h2>Cart Items</h2>
-        <i class="bi bi-bag-x" id="clear-cart" onclick="clearCart()"></i>
+            <h2>Cart Items</h2>
+            <i class="bi bi-bag-x" id="clear-cart" onclick="clearCart()"></i>
+        </div>
         <ul id="cart-list">
-
+            
         </ul>
 
         <div id="total-price">
@@ -50,8 +52,8 @@
             <img src="./img/pngimg.com - circle_PNG36.png" alt="logo placeholder" height="100px" width="100px">
             <input type="text" placeholder="Search" name="" id="search_bar">
             <div class="cart">
-                <i class="bi bi-bag" id="shopping-cart" onclick="toggleCart()"></i>
-               <div class="cartAmount">0</div>
+                <i class="bi bi-bag" id="shopping-cart" onclick="toggleCartDesk()"></i>
+               
             </div>
         </div>
         <nav class="desktop_exclusive" >
@@ -182,7 +184,7 @@
         
         <div class="cart">
          <i class="bi bi-bag" id="shopping-cart" onclick="toggleCart()"></i>
-        <div class="cartAmount">0</div>
+        
         </div>
 
         <i class="bi bi-list" id="menu" onclick="openMenu()"></i>
